@@ -1,0 +1,12 @@
+#########################################################################################
+# Nexus switchkonfig defaults:
+# xml server max-session 8
+# no xml server validate all
+# xml server timeout 1200
+#########################################################################################
+switch# configure terminal
+switch(config)# xml server validate all 
+switch(config)# feature ssh server
+switch(config)# xml server max-session 6
+switch(config)# xml server timeout 600
+switch(config)# copy running-config startup-config
