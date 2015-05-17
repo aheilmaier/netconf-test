@@ -1,0 +1,10 @@
+#############################################################
+# to kill a foreign netconfsession you need to have the session-id
+# you can not kill your own netconfsession
+#############################################################
+<?xml version="1.0"?>
+<nc:rpc message-id="101" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="http://www.cisco.com/nxos:1.0">
+  <nc:kill-session>
+    <nc:session-id>32116</nc:session-id>
+  </nc:kill-session>
+</nc:rpc>]]>]]>

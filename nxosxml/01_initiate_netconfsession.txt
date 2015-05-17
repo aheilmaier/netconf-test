@@ -1,0 +1,47 @@
+#############################################################
+# first start an ssh session with subsystem xmlagent to nxos
+# (subsystem netconf also works
+#############################################################
+ssh <user>@<nxos-host> -s xmlagent
+ssh <user>@<nxos-host> -s netconf
+
+#############################################################
+# when logged in with username/password the nxos sends a hello
+# you also have to repond with a hello message
+#############################################################
+# server/nxos hello
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:xml:ns:netconf:base:1.0</capability>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+  </capabilities>
+  <session-id>28995</session-id>
+</hello>
+]]>]]>
+
+# you have to respond with a client hello to get started with further commands
+<?xml version="1.0"?>
+<nc:hello xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <nc:capabilities>
+    <nc:capability>urn:ietf:params:xml:ns:netconf:base:1.0</nc:capability>
+  </nc:capabilities>
+</nc:hello>]]>]]>
+
+#############################################################
+# to check the session status use following netconf rpc
+#############################################################
+<?xml version="1.0"?>
+<nc:rpc message-id="1" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="http://www.cisco.com/nxos:1.0:nfcli">
+  <nc:get>
+    <nc:filter type="subtree">
+      <show>
+        <xml>
+          <server>
+            <status/>
+          </server>
+        </xml>
+      </show>
+    </nc:filter>
+  </nc:get>
+</nc:rpc>]]>]]>
