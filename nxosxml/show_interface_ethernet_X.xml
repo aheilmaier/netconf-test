@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<nc:rpc message-id="1" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="http://www.cisco.com/nxos:1.0:if_manager">
+  <nc:get>
+    <nc:filter type="subtree">
+      <show>
+        <interface>
+          <__XML__INTF_ifeth>
+           <__XML__PARAM_value>
+            <ethernet>1/1</ethernet>
+           </__XML__PARAM_value>
+          </__XML__INTF_ifeth>
+        </interface>
+      </show>
+    </nc:filter>
+  </nc:get>
+</nc:rpc>]]>]]>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nc:rpc xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nxos="http://www.cisco.com/nxos:1.0" message-id="$messageid">
+    <nxos:exec-command>
+        <nxos:cmd>
+show vlan id 1999
+        </nxos:cmd>
+    </nxos:exec-command>
+</nc:rpc>
+]]>]]>

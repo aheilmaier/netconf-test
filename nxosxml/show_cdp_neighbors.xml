@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<nc:rpc message-id="1" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="http://www.cisco.com/nxos:1.0:cdpd">
+  <nc:get>
+    <nc:filter type="subtree">
+      <show>
+        <cdp>
+          <neighbors>
+            <__XML__OPT_Cmd_show_cdp_neighbors_interface/>
+          </neighbors>
+        </cdp>
+      </show>
+    </nc:filter>
+  </nc:get>
+</nc:rpc>]]>]]>

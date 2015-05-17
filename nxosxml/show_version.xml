@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<nc:rpc message-id="1" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="http://www.cisco.com/nxos:1.0:sysmgrcli">
+  <nc:get>
+    <nc:filter type="subtree">
+      <show>
+        <version>
+          <__XML__OPT_Cmd_sysmgr_show_version___readonly__/>
+        </version>
+      </show>
+    </nc:filter>
+  </nc:get>
+</nc:rpc>]]>]]>
